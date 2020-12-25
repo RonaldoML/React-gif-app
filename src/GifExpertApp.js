@@ -3,9 +3,9 @@ import { AddCategory } from './components/AddCategory';
 import { GifGrid } from './components/GifGrid';
 
 
-const GifExpert = () => {
+const GifExpert = ({ defaultCategories = ['Lol'] }) => {
 
-    const [categories, setCategories] = useState(['League of Legends']);
+    const [categories, setCategories] = useState( defaultCategories );
 
     return (
         <>
@@ -13,23 +13,23 @@ const GifExpert = () => {
                 Gif Searcher
             </h2>
 
-            <AddCategory setCategories = {setCategories}/>
-            
+            <AddCategory setCategories={setCategories} />
+
             <hr />
-            
+
 
             <ol>
-                { 
-                categories.map( c => 
+                {
+                    categories.map(c =>
                     (
-                        <GifGrid 
-                            key= {c}
-                            category = {c}
+                        <GifGrid
+                            key={c}
+                            category={c}
                         />
-                    )) 
+                    ))
                 }
             </ol>
-            
+
         </>
     );
 

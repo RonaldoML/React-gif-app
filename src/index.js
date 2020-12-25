@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import GifExpert from '../src/GifExpertApp';
+import Login from './components/Login';
 
 ReactDOM.render(
     <GifExpert />,
